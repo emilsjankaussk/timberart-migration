@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/0r8maz5yq~e~i.css","style"]
+:HL["https://timberart.lv/image/catalog/category-images/5k4_pirts_front2.png","image"]
+:HL["https://timberart.lv/image/catalog/product/karkasa%20pirtis%20un%20mājas/Termokoka%20pirtsmaja%204,50m/TimberRAT_saunahouse_Front2.png","image"]
+:HL["https://timberart.lv/image/catalog/product/karkasa%20pirtis%20un%20mājas/Cube%206m%20Raimonds/Thermocube_6mFront.png","image"]
+:HL["https://timberart.lv/image/catalog/product/kempingi/Spiral%20camping%20pod%20–%20Autumn/Prot_front3-1.png","image"]
+:HL["https://images.unsplash.com/photo-1629654291663-b91ad427698f?w=800&auto=format&fit=crop","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"products","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"bAMIPtVAS43CkO1Lab5--"}
