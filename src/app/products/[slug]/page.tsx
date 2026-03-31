@@ -3,6 +3,16 @@ import Link from 'next/link';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import * as motion from 'framer-motion/client';
 
+export function generateStaticParams() {
+  const categorySlugs = CATEGORIES.map(c => ({ slug: c.href.split('/').pop() || '' }));
+  const productSlugs = FEATURED_PRODUCTS.map(p => ({ slug: p.slug }));
+  
+  // Deduplicate and filter empty
+  const paths = [...categorySlugs, ...productSlugs].filter(p => p.slug);
+  const unique = Array.from(new Set(paths.map(p => p.slug))).map(slug => ({ slug }));
+  return unique;
+}
+
 function FadeInConfig({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
   return (
     <motion.div
@@ -16,9 +26,10 @@ function FadeInConfig({ children, delay = 0 }: { children: React.ReactNode, dela
   );
 }
 
-export default function CollectionPage({ params }: { params: { slug: string } }) {
+export default async function CollectionPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
   // Try to find if this slug matches a broad category
-  const category = CATEGORIES.find(c => c.href.includes(params.slug)) || CATEGORIES[0];
+  const category = CATEGORIES.find(c => c.href.includes(resolvedParams.slug)) || CATEGORIES[0];
   
   // Use all featured products for this demo collection
   const products = FEATURED_PRODUCTS;

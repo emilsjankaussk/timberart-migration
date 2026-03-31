@@ -27,7 +27,7 @@ export default function ServicesIndex() {
             <Link key={service.label} href={service.href} className="p-6 bg-bark border border-amber-900/20 rounded-2xl hover:border-amber-500/50 transition-all flex items-center justify-between group">
               <div>
                 <h3 className="text-xl font-serif text-cream group-hover:text-amber-500 transition-colors">{service.label}</h3>
-                {('desc' in service && service.desc) && <p className="text-fog mt-1 text-sm">{service.desc}</p>}
+                {('desc' in service && typeof service.desc === 'string') && <p className="text-fog mt-1 text-sm">{service.desc}</p>}
               </div>
               <ArrowRight className="w-5 h-5 text-amber-700 group-hover:text-amber-500 transition-colors" />
             </Link>

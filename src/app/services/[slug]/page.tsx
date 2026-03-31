@@ -1,9 +1,19 @@
 import Link from 'next/link';
 import { ArrowLeft, Settings } from 'lucide-react';
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
+export function generateStaticParams() {
+  return [
+    { slug: 'koka-logu-durvis' },
+    { slug: 'remonts' },
+    { slug: 'telpu-izbuve' },
+    { slug: 'individualie' },
+  ];
+}
+
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
   // Simple Title Case formatter for the slug
-  const serviceName = params.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const serviceName = resolvedParams.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   return (
     <main className="min-h-screen pt-32 pb-20 bg-charcoal">
