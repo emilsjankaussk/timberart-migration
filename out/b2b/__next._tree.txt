@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0r8maz5yq~e~i.css","style"]
+:HL["https://images.unsplash.com/photo-1562602834-b81b5b1e665e?w=1600&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1648219476756-00bfbbe38f79?w=800&auto=format&fit=crop","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"b2b","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"3N1YUGRlqn-N-KHwWdrac"}
