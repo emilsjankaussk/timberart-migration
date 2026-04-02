@@ -51,7 +51,7 @@ function StatCounter({ value, label }: { value: string; label: string }) {
 // ─── Hero Section ────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-end pt-24 lg:pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col pt-28 pb-12 lg:pt-32 lg:pb-20 overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -65,7 +65,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-charcoal/10" />
 
       {/* Content */}
-      <div className="relative container-main w-full">
+      <div className="relative container-main w-full mt-auto">
         <div className="max-w-3xl animate-fade-up">
           {/* Trust badges */}
           <div className="flex flex-wrap gap-2 mb-6">
