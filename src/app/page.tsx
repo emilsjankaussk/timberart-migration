@@ -51,7 +51,7 @@ function StatCounter({ value, label }: { value: string; label: string }) {
 // ─── Hero Section ────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-end pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-end pt-24 lg:pt-32 pb-20 overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
